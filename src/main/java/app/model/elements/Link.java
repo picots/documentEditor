@@ -26,4 +26,35 @@ public abstract class Link implements Element {
 		this.text = text;
 		this.url = url;
 	}
+	
+	/**
+	 * Get the link content
+	 * @return the link content
+	 */
+	public String getText() {
+		return text;
+	}
+	/**
+	 * Change the link content
+	 * @param text the new content
+	 */
+	public void setText(String text) {
+		this.text = text;
+	}
+	
+	/**
+	 * Get the link address
+	 * @return the link address
+	 */
+	public String getUrl() {
+		return url;
+	}
+	
+	/**
+	 * Change the link address
+	 * @param url the new address
+	 */
+	public void setUrl(String url) {
+		this.url = url;
+	}
 }

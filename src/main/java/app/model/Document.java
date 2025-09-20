@@ -71,7 +71,10 @@ public abstract class Document {
 	public void read(File f) {
 		Path p = f.toPath();
 		try(BufferedReader br = Files.newBufferedReader(p)) {
-			//TODO copy the content in the document
+			String line;
+			while((line = br.readLine()) != null) {
+				content.addAll(parser.parseLine(line));
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

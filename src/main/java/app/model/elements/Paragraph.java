@@ -20,4 +20,20 @@ public abstract class Paragraph implements Element {
 	public Paragraph(String text) {
 		this.text = text;
 	}
+	
+	/**
+	 * Get the paragraph content 
+	 * @return the paragraph content
+	 */
+	public String getText() {
+		return text;
+	}
+	
+	/**
+	 * Change the  paragraph content
+	 * @param text the new content
+	 */
+	public void setText(String text) {
+		this.text = text;
+	}
 }

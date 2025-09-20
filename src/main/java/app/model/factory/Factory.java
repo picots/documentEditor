@@ -18,7 +18,6 @@ public interface Factory {
 	 */
 	public Element createParagraph(String text);
 	
-	
 	/**
 	 * Create a new link in the document
 	 * @param text the link content 

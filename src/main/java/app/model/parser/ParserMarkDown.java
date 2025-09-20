@@ -4,16 +4,18 @@ import app.model.elements.Link;
 import app.model.elements.Paragraph;
 import app.model.factory.FactoryMarkDown;
 
-public class ParserMarkDown implements Parser {
+/**
+ * Parse a {@link app.model.DocumentMarkDown DocumentMarkDown}
+ * @author Picot Solal
+ * @version 0.1
+ * @since 2025
+ */
+public class ParserMarkDown extends Parser {
 	/**
-	 * the factory to create the elements in MarkDown
-	 */
-	FactoryMarkDown factory;
-	
-	/**
-	 * Initialize the factory
+	 * Initialize the {@link app.factory.FactoryMarkDown FactoryMarkDown}
 	 */
 	public ParserMarkDown() {
+		super();
 		factory = new FactoryMarkDown();
 	}
 	
@@ -25,10 +27,9 @@ public class ParserMarkDown implements Parser {
 	@Override
 	public Link parseLink(String str) {
 		if(!str.matches("(?s)[(.*?)]((.*?))"))
-			throw new IllegalArgumentException("The specified string is not an MarkDown link");
+			throw new IllegalArgumentException("The specified string isn't an MarkDown link");
 		String text = str.substring(str.indexOf("["), str.lastIndexOf("]"));
 		String url = str.substring(str.lastIndexOf("("), str.lastIndexOf(")"));
 		return (Link) factory.createLink(text, url);
 	}
-
 }
