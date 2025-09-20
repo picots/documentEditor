@@ -1,5 +1,7 @@
 package app.model.elements;
 
+import java.util.Objects;
+
 /**
  * An abstract link modeling
  * @author Picot Solal
@@ -56,5 +58,15 @@ public abstract class Link implements Element {
 	 */
 	public void setUrl(String url) {
 		this.url = url;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Link))
+			return false;
+		Link other = (Link) obj;
+		return Objects.equals(text, other.text) && Objects.equals(url, other.url);
 	}
 }

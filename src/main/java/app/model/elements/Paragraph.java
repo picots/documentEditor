@@ -1,5 +1,7 @@
 package app.model.elements;
 
+import java.util.Objects;
+
 /**
  * An abstract paragraph modeling
  * @author Picot Solal
@@ -35,5 +37,15 @@ public abstract class Paragraph implements Element {
 	 */
 	public void setText(String text) {
 		this.text = text;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Paragraph))
+			return false;
+		Paragraph other = (Paragraph) obj;
+		return Objects.equals(text, other.text);
 	}
 }
