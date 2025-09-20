@@ -1,6 +1,7 @@
 package app.model;
 
 import app.model.factory.FactoryHTML;
+import app.model.parser.ParserHTML;
 
 /**
  * An HTML document modeling
@@ -12,10 +13,11 @@ import app.model.factory.FactoryHTML;
 public class DocumentHTML extends Document {
 	
 	/**
-	 * Initialize the specific factory to build the document in HTML
+	 * Initialize the specific factory to build the document in HTML and the specific parser
 	 */
 	public DocumentHTML() {
 		super();
 		factory = new FactoryHTML();
+		parser = new ParserHTML();
 	}
 }

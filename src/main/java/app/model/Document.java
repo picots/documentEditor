@@ -11,6 +11,7 @@ import java.util.List;
 
 import app.model.elements.Element;
 import app.model.factory.Factory;
+import app.model.parser.Parser;
 
 /**
  * An abstract document modeling
@@ -28,6 +29,11 @@ public abstract class Document {
 	 * Any specific document as a specific factory so the abstract document as an abstract factory
 	 */
 	protected Factory factory;
+	
+	/**
+	 * Any specific document as a specific parser 
+	 */
+	protected Parser parser;
 	
 	/**
 	 * Create an empty document

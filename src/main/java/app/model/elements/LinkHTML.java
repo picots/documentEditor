@@ -20,7 +20,7 @@ public class LinkHTML extends Link {
 
 	@Override
 	public String render() {
-		return null;
+		return String.format("<a href='%s'>%s</a>", url, text);
 	}
 
 }

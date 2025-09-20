@@ -20,8 +20,7 @@ public class LinkMarkDown extends Link {
 
 	@Override
 	public String render() {
-		
-		return null;
+		return String.format("[%s](%s)", text, url);
 	}
 
 }
