@@ -1,4 +1,8 @@
-package app.model;
+package app.model.factory;
+
+import app.model.elements.Element;
+import app.model.elements.LinkHTML;
+import app.model.elements.ParagraphHTML;
 
 /**
  * the factory to build HTML document 

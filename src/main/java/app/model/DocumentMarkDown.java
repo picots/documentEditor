@@ -1,5 +1,7 @@
 package app.model;
 
+import app.model.factory.FactoryMarkDown;
+
 /**
  * A MarkDown document modeling
  * @author Picot Solal

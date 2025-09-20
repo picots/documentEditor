@@ -1,4 +1,6 @@
-package app.model;
+package app.model.factory;
+
+import app.model.elements.Element;
 
 /**
  * the abstract factory to build any document

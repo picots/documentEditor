@@ -1,5 +1,7 @@
 package app.model;
 
+import app.model.factory.FactoryHTML;
+
 /**
  * An HTML document modeling
  @author Picot Solal

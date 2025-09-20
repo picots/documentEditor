@@ -1,4 +1,4 @@
-package app.model;
+package app.model.elements;
 
 /**
  * An HTML link modeling

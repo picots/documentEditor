@@ -1,4 +1,4 @@
-package app.model;
+package app.model.elements;
 
 /**
  * A MarkDown link modeling

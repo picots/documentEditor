@@ -9,6 +9,9 @@ import java.nio.file.Path;
 import java.util.LinkedList;
 import java.util.List;
 
+import app.model.elements.Element;
+import app.model.factory.Factory;
+
 /**
  * An abstract document modeling
  * @author Picot Solal
