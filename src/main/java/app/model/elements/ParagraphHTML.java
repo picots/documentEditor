@@ -12,6 +12,7 @@ public class ParagraphHTML extends Paragraph {
 	/**
 	 * Create an HTML paragraph with specified text
 	 * @param text the paragraph content
+	 * @throws {@link java.lang.IllegalArgumentException IllegalArgumentException} when the content is empty
 	 */
 	public ParagraphHTML(String text) {
 		super(text);

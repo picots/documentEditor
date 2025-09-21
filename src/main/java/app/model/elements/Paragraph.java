@@ -18,6 +18,7 @@ public abstract class Paragraph implements Element {
 	/**
 	 * Create a paragraph with the specified text
 	 * @param text the paragraph content
+	 * @throws {@link java.lang.IllegalArgumentException IllegalArgumentException} when the content is empty
 	 */
 	public Paragraph(String text) {
 		this.text = text;
