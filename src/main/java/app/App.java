@@ -15,6 +15,9 @@ import javafx.stage.Stage;
  */
 public class App extends Application {
 	
+	/**
+	 * The {@link javafx.scene.Scene Scene} we load in the {@link javafx.stage.Stage Stage}
+	 */
 	public static Scene scene;
 	
     @Override
@@ -29,10 +32,14 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-    	FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("fxml/"+fxml + ".fxml"));
+    	FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/picots/documentEditor/app/fxml/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
     
+    /**
+     * Launch the program
+     * @param args the program arguments
+     */
     public static void main(String[] args) {
         launch();
     }

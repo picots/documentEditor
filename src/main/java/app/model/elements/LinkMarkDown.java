@@ -1,4 +1,4 @@
-package app.model;
+package app.model.elements;
 
 /**
  * A MarkDown link modeling
@@ -13,6 +13,7 @@ public class LinkMarkDown extends Link {
 	 * Create an MarkDown link with the specified text and url
 	 * @param text the link content
 	 * @param url the link address
+	 * @throws IllegalArgumentException when the content or the address is empty
 	 */
 	public LinkMarkDown(String text, String url) {
 		super(text, url);
@@ -20,8 +21,7 @@ public class LinkMarkDown extends Link {
 
 	@Override
 	public String render() {
-		
-		return null;
+		return String.format("[%s](%s)", text, url);
 	}
 
 }

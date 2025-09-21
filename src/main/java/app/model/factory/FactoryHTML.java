@@ -1,7 +1,11 @@
-package app.model;
+package app.model.factory;
+
+import app.model.elements.Element;
+import app.model.elements.LinkHTML;
+import app.model.elements.ParagraphHTML;
 
 /**
- * the factory to build HTML document 
+ * the factory to build {@link app.model.DocumentHTML DocumentHTML} 
  * @author Picot Solal
  * @version 0.1
  * @since 2025

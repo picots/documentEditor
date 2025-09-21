@@ -9,6 +9,10 @@ import java.nio.file.Path;
 import java.util.LinkedList;
 import java.util.List;
 
+import app.model.elements.Element;
+import app.model.factory.Factory;
+import app.model.parser.Parser;
+
 /**
  * An abstract document modeling
  * @author Picot Solal
@@ -27,16 +31,30 @@ public abstract class Document {
 	protected Factory factory;
 	
 	/**
+	 * Any specific document as a specific parser 
+	 */
+	protected Parser parser;
+	
+	/**
 	 * Create an empty document
 	 */
 	public Document() {
 		content = new LinkedList<Element>();
 	}
 	
+	/**
+	 * Add a new paragraph with the specified content
+	 * @param text the paragraph content
+	 */
 	public void addParagraph(String text) {
 		content.add(factory.createParagraph(text));
 	}
 	
+	/**
+	 * Add a new link with the specified content and  specified address
+	 * @param text the link content
+	 * @param url the link address
+	 */
 	public void addLink(String text, String url) {
 		content.add(factory.createLink(text, url));
 	}
@@ -62,7 +80,9 @@ public abstract class Document {
 	public void read(File f) {
 		Path p = f.toPath();
 		try(BufferedReader br = Files.newBufferedReader(p)) {
-			//TODO copy the content in the document
+			String line;
+			while((line = br.readLine()) != null)
+				content.addAll(parser.parseLine(line));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

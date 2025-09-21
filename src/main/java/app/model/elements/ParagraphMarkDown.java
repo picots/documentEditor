@@ -1,4 +1,4 @@
-package app.model;
+package app.model.elements;
 
 /**
  * A MarkDown paragraph modeling
@@ -12,6 +12,7 @@ public class ParagraphMarkDown extends Paragraph {
 	/**
 	 * Create a MarkDown paragraph with specified text
 	 * @param text the paragraph content
+	 * @throws IllegalArgumentException when the content is empty
 	 */
 	public ParagraphMarkDown(String text) {
 		super(text);

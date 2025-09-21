@@ -1,4 +1,4 @@
-package app.model;
+package app.model.elements;
 
 /**
  * An HTML paragraph modeling
@@ -12,6 +12,7 @@ public class ParagraphHTML extends Paragraph {
 	/**
 	 * Create an HTML paragraph with specified text
 	 * @param text the paragraph content
+	 * @throws IllegalArgumentException when the content is empty
 	 */
 	public ParagraphHTML(String text) {
 		super(text);

@@ -1,4 +1,4 @@
-package app.model;
+package app.model.elements;
 
 /**
  * An HTML link modeling
@@ -13,6 +13,7 @@ public class LinkHTML extends Link {
 	 * Create an HTML link with the specified text and url
 	 * @param text the link content
 	 * @param url the link address
+	 * @throws IllegalArgumentException when the content or the address is empty
 	 */
 	public LinkHTML(String text, String url) {
 		super(text, url);
@@ -20,7 +21,7 @@ public class LinkHTML extends Link {
 
 	@Override
 	public String render() {
-		return null;
+		return String.format("<a href='%s'>%s</a>", url, text);
 	}
 
 }
