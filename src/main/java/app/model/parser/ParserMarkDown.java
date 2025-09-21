@@ -45,7 +45,7 @@ public class ParserMarkDown extends Parser {
 		try {
 			if(line.matches("\\[(.+)\\]\\((.+)\\)")) //a link
 				elements.add(parseLink(line));
-			else if(line.equals("\n")) { //we change paragraph
+			else if(line.equals("")) { //we change paragraph
 				elements.add(p);
 				p = null;
 			}

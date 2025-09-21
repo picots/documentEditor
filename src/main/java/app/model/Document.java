@@ -72,9 +72,8 @@ public abstract class Document {
 		Path p = f.toPath();
 		try(BufferedReader br = Files.newBufferedReader(p)) {
 			String line;
-			while((line = br.readLine()) != null) {
+			while((line = br.readLine()) != null)
 				content.addAll(parser.parseLine(line));
-			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
