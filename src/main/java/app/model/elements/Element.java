@@ -1,7 +1,7 @@
 package app.model.elements;
 
 /**
- * A basic element of a document
+ * A basic element of a {@link app.model.Document Document}
  * @author Picot Solal
  * @version 0.1
  * @since 2025

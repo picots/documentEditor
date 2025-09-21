@@ -3,7 +3,7 @@ package app.model.factory;
 import app.model.elements.Element;
 
 /**
- * the abstract factory to build any document
+ * the abstract factory to build any {@link app.model.Document Document}
  * @author Picot Solal
  * @version 0.1
  * @since 2025

@@ -15,6 +15,9 @@ import javafx.stage.Stage;
  */
 public class App extends Application {
 	
+	/**
+	 * The {@link javafx.scene.Scene Scene} we load in the {@link javafx.stage.Stage Stage}
+	 */
 	public static Scene scene;
 	
     @Override
@@ -33,6 +36,10 @@ public class App extends Application {
         return fxmlLoader.load();
     }
     
+    /**
+     * Launch the program
+     * @param args the program arguments
+     */
     public static void main(String[] args) {
         launch();
     }

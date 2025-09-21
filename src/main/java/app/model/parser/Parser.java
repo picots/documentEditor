@@ -34,7 +34,7 @@ public abstract class Parser {
 	 * Parse the specified line with the specific document format
 	 * @param line the line to parse
 	 * @return a list of elements we have parsed in the line 
-	 * @throws {@link IllegalArgumentException} when the line isn't written in the correct language
+	 * @throws IllegalArgumentException when the line isn't written in the correct language
 	 */
 	public abstract List<Element> parseLine(String line);
 	

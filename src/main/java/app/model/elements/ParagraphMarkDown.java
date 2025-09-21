@@ -12,7 +12,7 @@ public class ParagraphMarkDown extends Paragraph {
 	/**
 	 * Create a MarkDown paragraph with specified text
 	 * @param text the paragraph content
-	 * @throws {@link java.lang.IllegalArgumentException IllegalArgumentException} when the content is empty
+	 * @throws IllegalArgumentException when the content is empty
 	 */
 	public ParagraphMarkDown(String text) {
 		super(text);

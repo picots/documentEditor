@@ -5,7 +5,7 @@ import app.model.elements.LinkMarkDown;
 import app.model.elements.ParagraphMarkDown;
 
 /**
- * the factory to build MarkDown document 
+ * the factory to build {@link app.model.DocumentMarkDown DoucumentMarkDown} 
  * @author Picot Solal
  * @version 0.1
  * @since 2025

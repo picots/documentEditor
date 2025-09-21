@@ -24,7 +24,7 @@ public class ParserHTML extends Parser {
 	LinkHTML l;
 	
 	/**
-	 * Initialize the {@link app.factory.FactoryHTML FactoryHTML}
+	 * Initialize the {@link app.model.factory.FactoryHTML FactoryHTML}
 	 */
 	public ParserHTML() {
 		super();
@@ -35,7 +35,7 @@ public class ParserHTML extends Parser {
 	@Override
 	public Paragraph parseParagraph(String str) {
 		String text;
-		if (!(str.matches("(?s)<p\\b[^>]*>(.*?)</p>")))
+		if (!(str.matches("(?s)<p\\b[^>]*>(.+)</p>")))
 			throw new IllegalArgumentException("The specified string isn't an HTML paragraph");
 		if(str.matches("(?s)<p\\b[^>]*>.*?<a\\b[^>]*>.*?</a>.*?</p>")) // The paragraph contains a link
 			text = str.substring(str.indexOf(">") + 1, str.indexOf("<a")) + str.substring(str.indexOf("a>") + 2, str.lastIndexOf("<"));
@@ -55,8 +55,8 @@ public class ParserHTML extends Parser {
 	
 	/**
 	 * {@inheritDoc}
-	 * <br/>If a link is interlocked in a paragraph, the're will be a {@link app.elements.Paragraph Paragraph} 
-	 * <br/>and a {@link app.elements.Link Link} separated
+	 * <br/>If a link is interlocked in a paragraph, the're will be a {@link app.model.elements.Paragraph Paragraph} 
+	 * <br/>and a {@link app.model.elements.Link Link} separated
 	 * 
 	 */
 	@Override

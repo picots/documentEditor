@@ -18,9 +18,11 @@ public abstract class Paragraph implements Element {
 	/**
 	 * Create a paragraph with the specified text
 	 * @param text the paragraph content
-	 * @throws {@link java.lang.IllegalArgumentException IllegalArgumentException} when the content is empty
+	 * @throws IllegalArgumentException when the content is empty
 	 */
 	public Paragraph(String text) {
+		if(text.equals(""))
+			throw new IllegalArgumentException("the paragraph content can't be empty");
 		this.text = text;
 	}
 	

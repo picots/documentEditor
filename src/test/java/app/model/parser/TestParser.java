@@ -31,7 +31,7 @@ class TestParser {
 		list.add(new ParagraphMarkDown("test"));
 		list.add(new LinkMarkDown("test", "test"));
 		parser.parseLine("test");
-		assertEquals(parser.parseLine("\n").getFirst(), list.getFirst());
+		assertEquals(parser.parseLine("").getFirst(), list.getFirst());
 		assertEquals(parser.parseLine("[test](test)").getFirst(), list.getLast());
 	}
 

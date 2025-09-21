@@ -42,10 +42,19 @@ public abstract class Document {
 		content = new LinkedList<Element>();
 	}
 	
+	/**
+	 * Add a new paragraph with the specified content
+	 * @param text the paragraph content
+	 */
 	public void addParagraph(String text) {
 		content.add(factory.createParagraph(text));
 	}
 	
+	/**
+	 * Add a new link with the specified content and  specified address
+	 * @param text the link content
+	 * @param url the link address
+	 */
 	public void addLink(String text, String url) {
 		content.add(factory.createLink(text, url));
 	}
@@ -72,9 +81,8 @@ public abstract class Document {
 		Path p = f.toPath();
 		try(BufferedReader br = Files.newBufferedReader(p)) {
 			String line;
-			while((line = br.readLine()) != null) {
+			while((line = br.readLine()) != null)
 				content.addAll(parser.parseLine(line));
-			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

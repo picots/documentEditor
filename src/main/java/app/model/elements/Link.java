@@ -23,7 +23,7 @@ public abstract class Link implements Element {
 	 * Create a link with the specified text and url
 	 * @param text the link content
 	 * @param url the link address
-	 * @throws {@link java.lang.IllegalArgumentException IllegalArgumentException} when the content or the address is empty
+	 * @throws IllegalArgumentException when the content or the address is empty
 	 */
 	public Link(String text, String url) {
 		if(text.equals("") || url.equals(""))
