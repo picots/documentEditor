@@ -35,7 +35,7 @@ public class ParserHTML extends Parser {
 	@Override
 	public Paragraph parseParagraph(String str) {
 		String text;
-		if (!(str.matches("(?s)<p\\b[^>]*>(.*?)</p>")))
+		if (!(str.matches("(?s)<p\\b[^>]*>(.+)</p>")))
 			throw new IllegalArgumentException("The specified string isn't an HTML paragraph");
 		if(str.matches("(?s)<p\\b[^>]*>.*?<a\\b[^>]*>.*?</a>.*?</p>")) // The paragraph contains a link
 			text = str.substring(str.indexOf(">") + 1, str.indexOf("<a")) + str.substring(str.indexOf("a>") + 2, str.lastIndexOf("<"));

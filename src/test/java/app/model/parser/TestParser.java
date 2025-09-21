@@ -40,9 +40,10 @@ class TestParser {
 		ParserHTML parser = new ParserHTML();
 		assertEquals(parser.parseParagraph("<p>test</p>"), new ParagraphHTML("test"));
 		assertEquals(parser.parseParagraph("<p>test\n</p>"), new ParagraphHTML("test\n"));
-		assertEquals(parser.parseParagraph("<p class='test'>test</p>").getText(), "test");
-		assertEquals(parser.parseParagraph("<p>te<a href='#'>a</a>st</p>").getText(), "test");
+		assertEquals(parser.parseParagraph("<p class='test'>test</p>"), new ParagraphHTML("test"));
+		assertEquals(parser.parseParagraph("<p>te<a href='#'>a</a>st</p>"), new ParagraphHTML("test"));
 		assertThrows(IllegalArgumentException.class, () -> parser.parseParagraph("test"));
+		assertThrows(IllegalArgumentException.class, () -> parser.parseParagraph("<p></p>"));
 	}
 
 	@Test
