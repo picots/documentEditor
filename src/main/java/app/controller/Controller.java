@@ -53,9 +53,9 @@ public class Controller implements Initializable{
 		menuController.setController(this);
 		
 		document = new SimpleObjectProperty<Document>();
+		
+		addL.setOnAction(e -> document.get().addLink(lContent.getText(), lAdress.getText()));
+		addP.setOnAction(e -> document.get().addParagraph(pContent.getText()));
 	}
-    
-    
-
 }
 
