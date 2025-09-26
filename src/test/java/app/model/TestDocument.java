@@ -1,9 +1,10 @@
 package app.model;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 import java.io.File;
-import org.junit.jupiter.api.Test;
 
 import app.model.elements.LinkHTML;
 import app.model.elements.LinkMarkDown;

@@ -1,10 +1,10 @@
 package app.model.parser;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 import java.util.LinkedList;
-
-import org.junit.jupiter.api.Test;
 
 import app.model.elements.Element;
 import app.model.elements.LinkHTML;
